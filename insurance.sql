@@ -30,6 +30,7 @@ CREATE TABLE OWNS
 (
  driver_id char(10),
  reg_no char(10), 
+ 
 
 
   
