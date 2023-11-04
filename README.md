@@ -50,7 +50,7 @@ Queries, View and Trigger
 10. A trigger that prevents a driver from participating in more than 3 accidents in a given year.
 
 ## Order Processing Database 
-Write ER diagram and schema diagram. The primary keys are underlined and the data types are specified.
+3.Write ER diagram and schema diagram. The primary keys are underlined and the data types are specified.
 Create tables for the following schema listed below by properly specifying the primary keys and foreign keys.
 Enter at least five tuples for each relation.
 Order processing database
@@ -75,6 +75,17 @@ Queries, View and Trigger
 9. A tigger that updates order\_amount based on quantity and unit price of order\_item .
 
 ## Enrollment Database 
+4.Write ER diagram and schema diagram. The primary keys are underlined and the data types are specified.
+Create tables for the following schema listed below by properly specifying the primary keys and foreign keys.
+Enter at least five tuples for each relation.
+
+Student enrollment in courses and books adopted for each course
+1.STUDENT (regno: string, name: string, major: string, bdate: date)
+2.COURSE (course#:int, cname: string, dept: string)
+3.ENROLL(regno:string, course#: int,sem: int,marks: int)
+4.BOOK-ADOPTION (course#:int, sem: int, book-ISBN: int)
+5.TEXT (book-ISBN: int, book-title: string, publisher: string,author: string)
+
 
 1. Demonstrate how you add a new text book to the database and make this book be adopted by some department.  
 2. Produce a list of text books (include Course #, Book-ISBN, Book-title) in the alphabetical order for courses offered by the ‘CS’ department that use more than two books.  
