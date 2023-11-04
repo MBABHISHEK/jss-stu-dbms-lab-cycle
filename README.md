@@ -50,6 +50,17 @@ Queries, View and Trigger
 10. A trigger that prevents a driver from participating in more than 3 accidents in a given year.
 
 ## Order Processing Database 
+Write ER diagram and schema diagram. The primary keys are underlined and the data types are specified.
+Create tables for the following schema listed below by properly specifying the primary keys and foreign keys.
+Enter at least five tuples for each relation.
+Order processing database
+
+1. Customer (Cust#:int, cname: string, city: string)
+2. Order (order#:int, odate: date, cust#: int, order-amt: int)
+3. Order-item (order#:int, Item#: int, qty: int)
+4. Item (item#:int, unitprice: int)
+5. Shipment (order#:int, warehouse#: int, ship-date: date)
+6. Warehouse (warehouse#:int, city: string)
 
 1. List the Order# and Ship\_date for all orders shipped from Warehouse# "W2". 
 2. List the Warehouse information from which the Customer named "Kumar" was supplied his orders. Produce a listing of Order#, Warehouse#. 
