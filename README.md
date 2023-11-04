@@ -11,16 +11,6 @@ Enter at least five tuples for each relation.
 4.  RSERVERS (sid, bid, date)
 
 Queries, View and Trigger
-1.	Find the colours of boats reserved by Albert 
-2.	Find all sailor id’s of sailors who have a rating of at least 8 or reserved boat 103
-3.	 Find the names of sailors who have not reserved a boat whose name contains the string “storm”. Order the names in ascending order. 
-4.	Find the names of sailors who have reserved all boats. 
-5.	Find the name and age of the oldest sailor. 
-6.	For each boat which was reserved by at least 5 sailors with age >= 40, find the boat id and the average age of such sailors.
-7.	Create a view that shows the names and colours of all the boats that have been reserved by a sailor with a specific rating.
-8.	A trigger that prevents boats from being deleted If they have active reservations. 
-
-
 1. Find the colours of boats reserved by Albert 
 2. Find all sailor id’s of sailors who have a rating of at least 8 or reserved boat 103 
 3. Find the names of sailors who have not reserved a boat whose name contains the string “storm”. Order the names in ascending order. 
