@@ -25,6 +25,17 @@ Queries, View and Trigger
 12. A trigger that deletes all expired reservations.
 
 ## Insurance Database 
+2. Consider the database schemas given below.
+Write ER diagram and schema diagram. The primary keys are underlined and the data types are specified.
+Create tables for the following schema listed below by properly specifying the primary keys and foreign keys.
+Enter at least five tuples for each relation.
+
+Insurance database
+1. PERSON (driver id#: string, name: string, address: string)
+2. CAR (regno: string, model: string, year: int)
+3. ACCIDENT (report_ number: int, acc_date: date, location: string)
+4. OWNS (driver id#: string, regno: string)
+5. PARTICIPATED(driver id#:string, regno:string, report_ number: int,damage_amount: int)
 
 1. Find the total number of people who owned cars that were involved in accidents in 2021. 
 2. Find the number of accidents in which the cars belonging to “Smith” were involved.  
