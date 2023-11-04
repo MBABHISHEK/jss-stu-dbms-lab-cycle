@@ -103,12 +103,13 @@ Student enrollment in courses and books adopted for each course
 Create tables for the following schema listed below by properly specifying the primary keys and foreign keys.
 Enter at least five tuples for each relation.
 Company Database:
-EMPLOYEE (SSN, Name, Address, Sex, Salary, SuperSSN, DNo)
-DEPARTMENT (DNo, DName, MgrSSN, MgrStartDate)
-DLOCATION (DNo,DLoc)
-PROJECT (PNo, PName, PLocation, DNo)
-WORKS_ON (SSN, PNo, Hours)
+1.EMPLOYEE (SSN, Name, Address, Sex, Salary, SuperSSN, DNo)
+2.DEPARTMENT (DNo, DName, MgrSSN, MgrStartDate)
+3.DLOCATION (DNo,DLoc)
+4.PROJECT (PNo, PName, PLocation, DNo)
+5.WORKS_ON (SSN, PNo, Hours)
 
+Queries, View and Trigger
 1. Make a list of all project numbers for projects that involve an employee whose last name is ‘Scott’, either as a worker or as a manager of the department that controls the project.  
 2. Show the resulting salaries if every employee working on the ‘IoT’ project is given a 10 percent raise.  
 3. Find the sum of the salaries of all employees of the ‘Accounts’ department, as well as the maximum salary, the minimum salary, and the average salary in this department  
