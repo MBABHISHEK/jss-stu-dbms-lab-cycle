@@ -37,6 +37,7 @@ Insurance database
 4. OWNS (driver id#: string, regno: string)
 5. PARTICIPATED(driver id#:string, regno:string, report_ number: int,damage_amount: int)
 
+Queries, View and Trigger
 1. Find the total number of people who owned cars that were involved in accidents in 2021. 
 2. Find the number of accidents in which the cars belonging to “Smith” were involved.  
 3. Add a new accident to the database; assume any values for required attributes.  
