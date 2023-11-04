@@ -5,10 +5,10 @@
 Write ER diagram and schema diagram. The primary keys are underlined and the data types are specified.
 Create tables for the following schema listed below by properly specifying the primary keys and foreign keys.
 Enter at least five tuples for each relation.
-Sailors database
-SAILORS (sid, sname, rating, age)
-BOAT(bid, bname, color)
-RSERVERS (sid, bid, date)
+1.  Sailors database
+2.  SAILORS (sid, sname, rating, age)
+3.  BOAT(bid, bname, color)
+4.  RSERVERS (sid, bid, date)
 
 Queries, View and Trigger
 1.	Find the colours of boats reserved by Albert 
