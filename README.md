@@ -62,6 +62,8 @@ Order processing database
 5. Shipment (order#:int, warehouse#: int, ship-date: date)
 6. Warehouse (warehouse#:int, city: string)
 
+Queries, View and Trigger
+
 1. List the Order# and Ship\_date for all orders shipped from Warehouse# "W2". 
 2. List the Warehouse information from which the Customer named "Kumar" was supplied his orders. Produce a listing of Order#, Warehouse#. 
 3. Produce a listing: Cname, #ofOrders, Avg\_Order\_Amt, where the middle column is the total number of orders by the customer and the last column is the average order amount for that customer. (Use aggregate functions) 
