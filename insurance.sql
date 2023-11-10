@@ -108,4 +108,60 @@ WHERE c.reg_no = p.reg_no;
 
 SELECT * FROM CarsInAccident;
 
-CREATE VIEW DriversWithCar
+create view CarsInAccident as
+select distinct model, c_year
+from car c, participated p
+where c.reg_no=p.reg_no;
+
+select * from CarsInAccident;
+
+
+create view DriversWithCar as
+select driver_name, address
+from person p, owns o
+where p.driver_id=o.driver_id;
+
+select * from DriversWithCar;
+
+
+
+create view DriversWithAccidentInPlace as
+select driver_name
+from person p, accident a, participated ptd
+where p.driver_id = ptd.driver_id and a.report_no = ptd.report_no and a.location="Vijaynagar, Mysuru";
+
+select * from DriversWithAccidentInPlace;
+
+-- Trigger that prevents a driver with total_damage_amount greater than Rs. 50,000 from owning a car
+
+delimiter //
+create or replace trigger PreventOwnership 
+before insert on owns 
+for each row
+begin
+	if new.driver_id in (select driver_id from participated group by driver_id
+having sum(damage_amount) >= 50000) then
+	signal sqlstate '45000' set message_text = 'Damage Greater than Rs.50,000';
+	end if;
+end;//
+
+delimiter ;
+
+insert into owns VALUES
+("D222", "KA-21-AC-5473"); -- Will give error since total damage amount of D222 exceeds 50k
+
+-- A trigger that prevents a driver from participating in more than 2 accidents in a given year.
+
+DELIMITER //
+create trigger PreventParticipation
+before insert on participated
+for each row
+BEGIN
+	IF 2<=(select count(*) from participated where driver_id=new.driver_id) THEN
+		signal sqlstate '45000' set message_text='Driver has already participated in 2 accidents';
+	END IF;
+END;//
+DELIMITER ;
+
+INSERT INTO participated VALUES
+("D222", "KA-20-AB-4223", 66666, 20000);
