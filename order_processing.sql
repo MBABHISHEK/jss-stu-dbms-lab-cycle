@@ -129,35 +129,7 @@ select * from WharehouseWithKumarOrders;
 -- Delete all orders for customer named "Kumar".
 delete from Orders where cust_id = (select cust_id from Customers where cname like "%Kumar%");
 
-
--- Trigger that prevents warehouse details from being deleted if any item has to be shipped from that warehouse
-
-DELIMITER $$
-CREATE TRIGGER PreventWarehouseDelete
-	BEFORE DELETE ON Warehouses
-    FOR EACH ROW
-    BEGIN 
-		IF OLD.warehouse_id IN (SELECT warehouse_id FROM Shipments NATURAL JOIN Warehouses) THEN
-			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'An item has to be shipped from this warehouse!';
-		END IF;
-	END;
-$$
-DELIMITER ;
-
-
 DELETE FROM Warehouses WHERE warehouse_id = 2; -- Will give error since an item has to be shipped from warehouse 2
-
-
--- A tigger that updates order_amount based on quantity and unit price of order_item
-
-DELIMITER $$
-create trigger UpdateOrderAmt
-after insert on OrderItems
-for each row
-BEGIN
-	update Orders set order_amt=(new.qty*(select distinct unitprice from Items NATURAL JOIN OrderItems where item_id=new.item_id)) where Orders.order_id=new.order_id;
-END; $$
-DELIMITER ;
 
 INSERT INTO Orders VALUES
 (006, "2020-12-23", 0004, 1200);
