@@ -80,11 +80,11 @@ Create tables for the following schema listed below by properly specifying the p
 Enter at least five tuples for each relation.
 
 Student enrollment in courses and books adopted for each course
-1.STUDENT (regno: string, name: string, major: string, bdate: date)
-2.COURSE (course#:int, cname: string, dept: string)
-3.ENROLL(regno:string, course#: int,sem: int,marks: int)
-4.BOOK-ADOPTION (course#:int, sem: int, book-ISBN: int)
-5.TEXT (book-ISBN: int, book-title: string, publisher: string,author: string)
+1. STUDENT (regno: string, name: string, major: string, bdate: date)
+2. COURSE (course#:int, cname: string, dept: string)
+3. ENROLL(regno:string, course#: int,sem: int,marks: int)
+4. BOOK-ADOPTION (course#:int, sem: int, book-ISBN: int)
+5. TEXT (book-ISBN: int, book-title: string, publisher: string,author: string)
 
 
 1. Demonstrate how you add a new text book to the database and make this book be adopted by some department.  
