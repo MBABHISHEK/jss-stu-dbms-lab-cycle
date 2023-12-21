@@ -102,6 +102,7 @@ Student enrollment in courses and books adopted for each course
 5.Write ER diagram and schema diagram. The primary keys are underlined and the data types are specified.
 Create tables for the following schema listed below by properly specifying the primary keys and foreign keys.
 Enter at least five tuples for each relation.
+
 Company Database:
 1.EMPLOYEE (SSN, Name, Address, Sex, Salary, SuperSSN, DNo)
 2.DEPARTMENT (DNo, DName, MgrSSN, MgrStartDate)
