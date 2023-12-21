@@ -104,11 +104,11 @@ Create tables for the following schema listed below by properly specifying the p
 Enter at least five tuples for each relation.
 
 Company Database:
-1.EMPLOYEE (SSN, Name, Address, Sex, Salary, SuperSSN, DNo)
-2.DEPARTMENT (DNo, DName, MgrSSN, MgrStartDate)
-3.DLOCATION (DNo,DLoc)
-4.PROJECT (PNo, PName, PLocation, DNo)
-5.WORKS_ON (SSN, PNo, Hours)
+1. EMPLOYEE (SSN, Name, Address, Sex, Salary, SuperSSN, DNo)
+2. DEPARTMENT (DNo, DName, MgrSSN, MgrStartDate)
+3. DLOCATION (DNo,DLoc)
+4. PROJECT (PNo, PName, PLocation, DNo)
+5. WORKS_ON (SSN, PNo, Hours)
 
 Queries, View and Trigger
 1. Make a list of all project numbers for projects that involve an employee whose last name is ‘Scott’, either as a worker or as a manager of the department that controls the project.  
