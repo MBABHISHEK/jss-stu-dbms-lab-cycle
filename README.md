@@ -86,7 +86,7 @@ Student enrollment in courses and books adopted for each course
 4. BOOK-ADOPTION (course#:int, sem: int, book-ISBN: int)
 5. TEXT (book-ISBN: int, book-title: string, publisher: string,author: string)
 
-
+Queries, View and Trigger
 1. Demonstrate how you add a new text book to the database and make this book be adopted by some department.  
 2. Produce a list of text books (include Course #, Book-ISBN, Book-title) in the alphabetical order for courses offered by the ‘CS’ department that use more than two books.  
 3. List any department that has all its adopted books published by a specific publisher. 
